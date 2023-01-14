@@ -1,5 +1,5 @@
 from chessSounds import make
 
-soundStr = "black_has_pawns_on a7 s b6 s and c7 s s black king on b8 s black rook on c8 s white knight on a5 s white queen on e4 s s white_to_move mate_in_one"
+soundStr = "white_has_pawns_on f2 s g3 s and h2 s s white queen d1 s white rook f1 s white king g1 s s black queen b7 s black king e8 s black knight g5 s s black_to_move mate_in_one"
 
 make(soundStr.split(" "))
