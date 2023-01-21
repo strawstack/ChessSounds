@@ -20,6 +20,9 @@ function getAllPieces() {
     let ps = document.querySelectorAll("cg-board>piece");
     let pieces = [];
 
+    const widthStr = document.querySelector("cg-container").style.width;
+    const CELL_SIZE = parseInt(widthStr.substr(0, widthStr.length - 2), 10) / 8;
+
     for(let p of ps) {
         let cn = p.className;
         let [_, coords] = p.style.transform.split("(");
@@ -28,7 +31,6 @@ function getAllPieces() {
         x = parseInt(x.substr(0, x.length - 2), 10);
         y = parseInt(y.substr(0, y.length - 3), 10);
         
-        const CELL_SIZE = 74;
         x = Math.floor(x / CELL_SIZE);
         y = Math.floor(y / CELL_SIZE);
 
